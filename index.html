@@ -3,85 +3,146 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CricBeat — The Ultimate Cricket Strategy TCG</title>
+  <title>CRICBEATGAME — Outwit. Outlast. Own the Game.</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <header>
-    <div class="logo">CRICBEAT</div>
-    <a href="#product" class="btn-primary">Get Core Pack</a>
-  </header>
+  <div class="app-container">
+    <header>
+      <div class="logo">CRICBEATGAME</div>
+    </header>
 
-  <!-- PLAYER CAROUSEL -->
-  <section class="hero-carousel">
-    <h2>FEATURED PLAYER CARDS</h2>
-    <p style="color: var(--text-muted);">Master 78+ cards across India, Australia, and England.</p>
-    <div class="card-preview-container">
-      <div class="game-card">
-        <img src="assets/players/chase-master.jpg" alt="Chase Master" style="width:100%; border-radius:8px;">
-        <h3 style="margin-top:10px;">Chase Master</h3>
-        <span style="color: var(--accent-gold); font-size: 12px;">RHB · INDIA</span>
-      </div>
-      <div class="game-card">
-        <img src="assets/players/bounce-king.jpg" alt="Bounce King" style="width:100%; border-radius:8px;">
-        <h3 style="margin-top:10px;">Bounce King</h3>
-        <span style="color: var(--accent-gold); font-size: 12px;">PACE · AUSTRALIA</span>
-      </div>
-      <div class="game-card">
-        <img src="assets/players/spin-hunter.jpg" alt="Spin Hunter" style="width:100%; border-radius:8px;">
-        <h3 style="margin-top:10px;">Spin Hunter</h3>
-        <span style="color: var(--accent-gold); font-size: 12px;">LHB · INDIA</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRODUCT SHOWCASE -->
-  <section id="product">
-    <h2>CORE BOARD PACK</h2>
-    <div class="product-box">
-      <div>
-        <img src="assets/product/core-pack-box.jpg" alt="CricBeat Core Pack" style="width:100%; border-radius:12px;">
-      </div>
-      <div>
-        <span style="color: var(--accent-gold); font-weight: bold; letter-spacing: 1px;">STARTER EDITION</span>
-        <h1 style="margin: 10px 0;">CricBeat Game Box</h1>
-        <p style="color: var(--text-muted);">
-          Includes Official Stadium Game Board, 2d6 Precision Dice, Rulebook, and Starter Deck across India, Australia, and England cards.
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">CRICBEATGAME</h1>
+        <p class="hero-tagline">Outwit. Outlast. Own the Game.</p>
+        <p class="hero-description">
+          The ultimate cricket strategy TCG. Build your squad, master the board, and outsmart your opponents in fast-paced 6-over tactical showdowns.
         </p>
-        <h2 style="color: var(--accent-blue); margin: 15px 0;">₹1,499</h2>
-        <a href="checkout.html" class="btn-primary" style="width: 100%;">Order Now</a>
+        <div class="hero-actions">
+          <a href="#product" class="btn-primary">Get Core Pack</a>
+          <a href="#how-to" class="btn-secondary">Watch How to Play</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- HOW TO PLAY VIDEO -->
-  <section id="how-to">
-    <h2>HOW TO PLAY</h2>
-    <p style="color: var(--text-muted); margin-bottom: 20px;">Master 6-Over TCG Strategy in 3 Minutes</p>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </section>
+    <!-- PLAYER CAROUSEL -->
+    <section class="hero-carousel">
+      <h2>FEATURED PLAYER CARDS</h2>
+      
+      <div class="carousel-container">
+        <button class="carousel-btn prev-btn" onclick="moveCarousel(-1)">&#10094;</button>
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="carouselTrack">
+            
+            <!-- Card 1 -->
+            <div class="carousel-slide">
+              <div class="game-card">
+                <div class="card-image-wrapper">
+                  <img src="public/assets/PlayerCards/PowerHitter.webp" alt="Power Hitter" class="card-img">
+                </div>
+              </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="carousel-slide">
+              <div class="game-card">
+                <div class="card-image-wrapper">
+                  <img src="public/assets/PlayerCards/GooglyFox.png" alt="Googly Fox" class="card-img">
+                </div>
+              </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="carousel-slide">
+              <div class="game-card">
+                <div class="card-image-wrapper">
+                  <img src="public/assets/PlayerCards/SixQueen.png" alt="Six Queen" class="card-img">
+                </div>
+              </div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="carousel-slide">
+              <div class="game-card">
+                <div class="card-image-wrapper">
+                  <img src="public/assets/PlayerCards/SpiritOfCricket.png" alt="Spirit Of Cricket" class="card-img">
+                </div>
+              </div>
+            </div>
+            
+            <!-- Card 5 (Back) -->
+            <div class="carousel-slide">
+              <div class="game-card back-card">
+                <div class="card-image-wrapper">
+                  <img src="public/assets/PlayerCards/PlayerCard-back.webp" alt="Card Back" class="card-img">
+                </div>
+              </div>
+            </div>
 
-  <!-- CONTACT US -->
-  <section id="contact" style="border-top: 1px solid var(--border); margin-top: 40px;">
-    <h2>CONTACT US</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; color: var(--text-muted);">
-      <div>
-        <strong>Company:</strong><br>CricBeat Games
+          </div>
+        </div>
+        <button class="carousel-btn next-btn" onclick="moveCarousel(1)">&#10095;</button>
       </div>
-      <div>
-        <strong>Email:</strong><br>support@cricbeatgame.com
+
+      <div class="carousel-dots" id="carouselDots">
+        <span class="dot active" onclick="jumpToSlide(0)"></span>
+        <span class="dot" onclick="jumpToSlide(1)"></span>
+        <span class="dot" onclick="jumpToSlide(2)"></span>
+        <span class="dot" onclick="jumpToSlide(3)"></span>
+        <span class="dot" onclick="jumpToSlide(4)"></span>
       </div>
-      <div>
-        <strong>WhatsApp:</strong><br><a href="https://wa.me/1234567890" style="color: var(--accent-blue);">Chat with us</a>
+    </section>
+
+    <!-- PRODUCT SHOWCASE -->
+    <section id="product">
+      <h2>CORE BOARD PACK</h2>
+      <div class="product-box">
+        <div>
+          <img src="public/assets/ProductTeaser.gif" alt="CricBeat Gameplay Teaser" class="product-img">
+        </div>
+        <div>
+          <span style="color: var(--accent-gold); font-weight: bold; letter-spacing: 1px;">COLLECTOR'S EDITION</span>
+          <h1 style="margin: 10px 0;">CricBeat Game Box</h1>
+          <p style="color: var(--text-muted);">
+            Includes Official Stadium Game Board, 2d6 Precision Dice, Rulebook, and Starter Deck across India, Australia, and England cards.
+          </p>
+          <h2 style="color: var(--accent-blue); margin: 15px 0;">₹1,499</h2>
+          <a href="checkout.html" class="btn-primary" style="width: 100%;">Order Now</a>
+        </div>
       </div>
-      <div>
-        <strong>Location:</strong><br>India / United Kingdom
+    </section>
+
+    <!-- HOW TO PLAY VIDEO -->
+    <section id="how-to">
+      <h2>HOW TO PLAY</h2>
+      <p style="color: var(--text-muted); margin-bottom: 20px;">Master 6-Over TCG Strategy in 3 Minutes</p>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- CONTACT US -->
+    <section id="contact" style="border-top: 1px solid var(--border); margin-top: 40px;">
+      <h2>CONTACT US</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; color: var(--text-muted);">
+        <div>
+          <strong>Company:</strong><br>CricBeat Games
+        </div>
+        <div>
+          <strong>Email:</strong><br>support@cricbeatgame.com
+        </div>
+        <div>
+          <strong>WhatsApp:</strong><br><a href="https://wa.me/1234567890" style="color: var(--accent-blue);">Chat with us</a>
+        </div>
+        <div>
+          <strong>Location:</strong><br>India / United Kingdom
+        </div>
+      </div>
+    </section>
+  </div>
 
   <script src="js/app.js"></script>
 </body>
