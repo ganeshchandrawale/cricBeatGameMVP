@@ -1,0 +1,21 @@
+{
+  "name": "cricbeat-mvp",
+  "version": "1.1.0",
+  "description": "CricBeat (CricBeatGame) Direct-to-Consumer MVP Landing and Checkout Hub",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "cricbeat",
+    "cricket",
+    "tcg",
+    "boardgame",
+    "razorpay"
+  ],
+  "author": "Ganesh Chandrawale",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
