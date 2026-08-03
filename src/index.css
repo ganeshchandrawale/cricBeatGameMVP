@@ -232,5 +232,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 @media (max-width: 640px) {
-  section { padding: 56px 0; }
+  section { padding: 52px 0; }
+  .container { padding: 0 16px; }
 }

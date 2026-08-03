@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
 import Reveal from '../components/Reveal.jsx';
@@ -13,6 +14,20 @@ const CARDS = [
 ];
 
 export default function Home() {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    const restart = () => { video.currentTime = 0; video.play().catch(() => {}); };
+    const handleTimeUpdate = () => { if (video.currentTime >= 15) restart(); };
+    video.addEventListener('timeupdate', handleTimeUpdate);
+    const timer = window.setTimeout(restart, 15000);
+    return () => {
+      video.removeEventListener('timeupdate', handleTimeUpdate);
+      window.clearTimeout(timer);
+    };
+  }, []);
 
   return (
     <>
@@ -45,10 +60,16 @@ export default function Home() {
           </div>
           <div className="hero__art hero__art--video">
             <div className="hero__art-card hero__video-shell media-shell">
-              <img
+              <video
+                ref={videoRef}
                 className="hero__video"
-                src={`${ASSETS}/ProductTeaser.gif`}
-                alt="CRICBEATGAME gameplay teaser"
+                src={`${ASSETS}/teaser.mp4`}
+                autoPlay
+                muted
+                playsInline
+                loop={false}
+                preload="metadata"
+                poster={`${ASSETS}/ProductTeaser.gif`}
                 width="1920"
                 height="1080"
               />

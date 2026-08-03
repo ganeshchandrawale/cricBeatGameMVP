@@ -429,6 +429,50 @@
   .hero__video-shell { width: 100%; }
 }
 
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  /* Spacing */
+  section { padding: 52px 0; }
+  .container { padding: 0 16px; }
+
+  /* Hero */
+  .hero { padding: 80px 0 60px; }
+  .hero h1 { font-size: clamp(2rem, 9vw, 2.6rem); }
+  .hero__lede { font-size: 0.97rem; }
+  .hero__actions { flex-direction: column; align-items: stretch; }
+  .hero__actions .btn { justify-content: center; width: 100%; }
+
+  /* Steps — collapse number above text on very small screens */
+  .step { grid-template-columns: 48px 1fr; gap: 12px; }
+  .step__num { font-size: 1.4rem; }
+
+  /* Pillars already 1-col at 900px — ensure padding fits */
+  .pillar { padding: 20px 16px; }
+
+  /* Product hero image gap */
+  .product-hero { gap: 32px; }
+
+  /* Contact */
+  .contact-grid { grid-template-columns: 1fr; gap: 0; }
+
+  /* Mode toggle */
+  .mode-toggle { flex-direction: column; }
+  .mode-toggle__btn { border-right: none; border-bottom: 1px solid var(--line); padding: 14px 16px; }
+  .mode-toggle__btn:last-child { border-bottom: none; }
+  .mode-toggle__label { font-size: 0.9rem; }
+
+  /* Phase pills */
+  .phase-pills { flex-direction: column; }
+  .phase-pill { min-width: unset; }
+
+  /* Checkout */
+  .checkout-summary { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .checkout-form { padding: 20px 16px; }
+
+  /* Footer */
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+}
+
 /* Checkout page */
 .checkout-summary {
   display: flex;
