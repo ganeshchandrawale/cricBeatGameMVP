@@ -1,21 +1,22 @@
 {
-  "name": "cricbeat-mvp",
-  "version": "1.1.0",
-  "description": "CricBeat (CricBeatGame) Direct-to-Consumer MVP Landing and Checkout Hub",
-  "main": "index.html",
+  "name": "cricbeatgame",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "start": "npx serve ."
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "keywords": [
-    "cricbeat",
-    "cricket",
-    "tcg",
-    "boardgame",
-    "razorpay"
-  ],
-  "author": "Ganesh Chandrawale",
-  "license": "UNLICENSED",
+  "dependencies": {
+    "framer-motion": "^11.2.10",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet-async": "^2.0.5",
+    "react-router-dom": "^6.24.1"
+  },
   "devDependencies": {
-    "serve": "^14.2.1"
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.3.1"
   }
 }
