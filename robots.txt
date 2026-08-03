@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cricbeatgame.com/sitemap.xml
