@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 
 const SITE = 'https://cricbeatgame.com';
-const DEFAULT_IMAGE = `${SITE}/assets/ProductTeaser.webp`;
+const DEFAULT_IMAGE = `${SITE}/assets/ProductTeaser.gif`;
 
 export default function SEO({
   title,
